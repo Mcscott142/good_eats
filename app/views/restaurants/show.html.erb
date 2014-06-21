@@ -10,6 +10,6 @@
 
   <ul>
   <% @reviews.each do |review| %>
-  <li><%= review.rating %> <br> <%= review.body %></li>
+  <li>Rating: <%= review.rating %> <br> <%= review.body %></li>
   <%end%>
   </ul>

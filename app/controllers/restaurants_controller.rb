@@ -21,6 +21,10 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def recently_added
+    @restaurants = Restaurant.order('created_at DESC LIMIT 10')
+  end
+
 private
   def restaurant_params
   params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :description, :category)
